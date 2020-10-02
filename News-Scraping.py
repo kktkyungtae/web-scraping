@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from openpyxl import Workbook
 
 driver = webdriver.Chrome('chromedriver')
 
@@ -17,6 +18,13 @@ soup = BeautifulSoup(req, 'html.parser')
 
 articles = soup.select('#main_pack > div.news.mynews.section._prs_nws > ul > li') # > li를 붙여준 것!
 # select_one하면 html 코드 형태로 나오고, select 하면 list 형태로 나온다
+
+# 엑셀에 저장하자
+wb = Workbook()
+ws1 = wb.active
+ws1.title = "articles"
+ws1.append(["제목", "링크", "신문사"])
+
 for article in articles:
     title = article.select_one('dl > dt > a').text # 제목 뽑아내기
     url = article.select_one('dl > dt > a')['href'] # url 뽑아내기
@@ -25,7 +33,9 @@ for article in articles:
     new_co = article.select_one('span._sp_each_source').text.split(' ')[0].replace('언론사', '')
 
 
-    print(title, url, new_co) # 여기에 .text 해도 된다
+    # print(title, url, new_co) # 여기에 .text 해도 된다
+    ws1.append([title, url, new_co]) #리스트 형태로 넣어야 하는 갑다![] 안에
+
     # 웹스크레핑은 이렇게 해야한다! 라는 정해진 것이 없다. 왜냐면 웹 사이트 마다 html이 다 다르고
     # 원하는 정보들이 딱 배운대로 적혀있을 가능성이 적다! 그래서 이래 저래 접근해서
     # 원하는 정보를 찾아내는 게 딱 좋다!
@@ -36,3 +46,4 @@ for article in articles:
 #####################
 
 driver.quit()
+wb.save(filename='articles.xlsx')
