@@ -19,22 +19,32 @@ s = smtplib.SMTP_SSL('smtp.gmail.com')
 s.login(me, my_password)
 
 # 받는 사람 정보
-you = "rokmt1134@nate.com"
+# 여러 사람에게 보낼때
+emails = ['rokmt1134@naver.com', 'rokmt1134@nate.com']
+for you in emails:
 
-# 메일 기본 정보 설정
-msg = MIMEMultipart('alternative')
-msg['Subject'] = "이것이 제목!!"
-msg['From'] = me
-msg['To'] = you
+    # 메일 기본 정보 설정
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = "이것이 제목!!"
+    msg['From'] = me
+    msg['To'] = you
 
-# 메일 내용 쓰기
-content = "내용은 없다! 뭐먹지 오늘?"
-part2 = MIMEText(content, 'plain')
-msg.attach(part2)
+    # 메일 내용 쓰기
+    content = "내용은 없다! 뭐먹지 오늘?"
+    part2 = MIMEText(content, 'plain')
+    msg.attach(part2)
 
-# 메일 보내고 서버 끄기
-s.sendmail(me, you, msg.as_string()) # sendmail로 메일을 보내는 거고
-# 그를 위해서 변수들을 세팅하는 것!
+    # 첨부하기!! 이해할 필요 없이..
+    part = MIMEBase('application', "octet-stream")
+    with open("articles.xlsx", 'rb') as file:
+        part.set_payload(file.read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', "attachment", filename="추석기사.xlsx")
+    msg.attach(part)
+
+    # 메일 보내고 서버 끄기
+    s.sendmail(me, you, msg.as_string()) # sendmail로 메일을 보내는 거고
+    # 그를 위해서 변수들을 세팅하는 것!
 s.quit()
 # 스켈레톤 코드에서 정보만 기입해서 실행하면 오류가 난다! 무슨 이중인증 그런것들 때문에
 # 그래서 이런놈들을 꺼줘야됨!!!
