@@ -21,6 +21,9 @@
 # 받아온 브라우저 코드에서 내가 찾는 것을 찾기란 쉽지 않다, 그래서 bs4로 찾아쓴다
 
 # 크롤링 기본세팅 코드
+# dload는 저장
+import dload
+
 from bs4 import BeautifulSoup # 뷰티풀숲은 브라우저가 보고 있는 것 중, 원하는 것을 속아 내는 것!
 from selenium import webdriver
 import time # 파이썬 내장함수! 나중에 필요해
@@ -44,11 +47,18 @@ soup = BeautifulSoup(req, 'html.parser')
 # select와 select_one!
 
 ###################################
-# 이미지검사 해서 Copy selector로 복사한 부분
-#islrg > div.islrc > div:nth-child(1) > a.wXeWr.islib.nfEiy.mM5pbd > div.bRMDJf.islir > img
-thumnails = soup.select_one('#imgList > div:nth-child(1) > a > img')['src'] # 해당 코드를 들고온다! [src] 우리는 src값이 필요한데 여기서 볼 수 있다.
-print(thumnails)
+# '이미지검사 해서 Copy selector로 복사한 부분' 카피셀럭터로 속아낸다!!!!
+# 한가지 이미지 src 뽑기
+# thumnails = soup.select_one('#imgList > div:nth-child(1) > a > img')['src'] # 해당 코드를 들고온다! [src] 우리는 src값이 필요한데 여기서 볼 수 있다.
+# 검색한 이미지들이 "nth-child(1)" 이 부분만 달라
 
+## 여러가지 이미지 src 뽑기
+i = 1
+thumnails = soup.select('#imgList > div > a > img')
+for thumnail in thumnails:
+    img = thumnail['src']
+    dload.save(img, f'img/{i}.jpg') #이미지를 저장하는데, img 폴더에, 1.jpg 라고 저장할꺼야
+    i += 1
 
 ###################################
 driver.quit() # 끝나면 닫아주기
