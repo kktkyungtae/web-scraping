@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dea3f12-91cc-4ca6-aea8-3816792a7210" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myemail.py" beforeDir="false" afterPath="$PROJECT_DIR$/myemail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/articles.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.myemail">
+  <component name="RunManager" selected="Python.News-Scraping2">
     <configuration name="News-Scraping" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Web scraing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,7 +56,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Web-Scraping" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="News-Scraping2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Web scraing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,7 +68,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web-Scraping.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/News-Scraping2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.News-Scraping2" />
+        <item itemvalue="Python.Web-Scraping2" />
         <item itemvalue="Python.myemail" />
         <item itemvalue="Python.News-Scraping" />
         <item itemvalue="Python.temp" />
-        <item itemvalue="Python.Web-Scraping2" />
-        <item itemvalue="Python.Web-Scraping" />
       </list>
     </recent_temporary>
   </component>
@@ -171,22 +172,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="891" y="202" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602141062599" />
-    <state width="808" height="183" key="GridCell.Tab.0.bottom" timestamp="1601628676374">
+    <state width="691" height="210" key="GridCell.Tab.0.bottom" timestamp="1602322583175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="808" height="183" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601628676374" />
-    <state width="808" height="183" key="GridCell.Tab.0.center" timestamp="1601628676374">
+    <state width="691" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602322583175" />
+    <state width="691" height="210" key="GridCell.Tab.0.center" timestamp="1602322583174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="808" height="183" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601628676374" />
-    <state width="808" height="183" key="GridCell.Tab.0.left" timestamp="1601628676374">
+    <state width="691" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602322583174" />
+    <state width="691" height="210" key="GridCell.Tab.0.left" timestamp="1602322583174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="808" height="183" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601628676374" />
-    <state width="808" height="183" key="GridCell.Tab.0.right" timestamp="1601628676374">
+    <state width="691" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602322583174" />
+    <state width="691" height="210" key="GridCell.Tab.0.right" timestamp="1602322583175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="808" height="183" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601628676374" />
+    <state width="691" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602322583175" />
     <state x="555" y="90" key="SettingsEditor" timestamp="1601626553269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
